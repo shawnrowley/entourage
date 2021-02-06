@@ -70,7 +70,7 @@ exports.getPosts = (req, res, next) => {
    })
    .catch (error => {
       res.status(500).json({
-        message: "Unable to update post"
+        message: "Unable to get post"
       });
    })
 }
