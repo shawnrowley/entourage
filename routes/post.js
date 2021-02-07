@@ -1,6 +1,7 @@
 const express = require ("express");
 
 const image = require("../middleware/image");
+const s3 = require("../middleware/s3")
 const postController = require("../controllers/post");
 const authenticate = require("../middleware/authenticate");
 
@@ -8,7 +9,7 @@ const router = express.Router();
 
 router.post("",
   authenticate,
-  image,
+  s3,
   postController.createPost
 );
 

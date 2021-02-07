@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const jwt = require("jsonwebtoken");
 
 module.exports = (req, res, next) => {
@@ -12,6 +14,4 @@ module.exports = (req, res, next) => {
   } catch (error) {
     res.status(401).json({message: "Invalid authorization token"})
   }
-
- // i.e. "Bearer  fdlfkjlisj;lna;hekjha.kjblkeuer(token)"
 }
